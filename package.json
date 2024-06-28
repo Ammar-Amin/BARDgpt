@@ -1,0 +1,27 @@
+{
+  "name": "greenswap",
+  "version": "1.0.0",
+  "description": "A website to buy, sell & swap your plants",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon sever/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ammar-Amin/GreenSwap.git"
+  },
+  "keywords": [
+    "Plants"
+  ],
+  "author": "Ammar Amin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ammar-Amin/GreenSwap/issues"
+  },
+  "homepage": "https://github.com/Ammar-Amin/GreenSwap#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
