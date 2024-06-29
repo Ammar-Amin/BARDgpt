@@ -6,6 +6,8 @@ dotenv.config();
 
 const app = express();
 
+app.use(express.json())
+
 connectDB()
     .then(() => {
         app.on('error', (err) => {
@@ -24,3 +26,9 @@ connectDB()
 app.get('/', (req, res) => {
     res.send("Welcome to the app!");
 })
+
+// routes import 
+import userRouter from './routes/user.router.js';
+
+// routes declaration 
+app.use('/api/users', userRouter);
