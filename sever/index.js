@@ -32,3 +32,17 @@ import userRouter from './routes/user.router.js';
 
 // routes declaration 
 app.use('/api/users', userRouter);
+
+
+
+// Global error handler
+app.use((err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || 'Internal Server Error'
+    console.log(err.stack)
+    return res.status(statusCode).json({
+        success: false,
+        statusCode,
+        message,
+    })
+})
