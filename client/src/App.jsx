@@ -1,11 +1,17 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home, Layout } from './components';
 
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-center text-7xl text-green-600 my-5">GreenSwap</h1>
-    </>
+    <BrowserRouter >
+      <Routes>
+        <Route path='/' element={<Layout />} >
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
